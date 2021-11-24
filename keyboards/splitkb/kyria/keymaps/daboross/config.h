@@ -16,26 +16,18 @@
 
 #pragma once
 
-#define LAYER_STATE_8BIT
-#define DYNAMIC_KEYMAP_LAYER_COUNT 5
-#define IGNORE_MOD_TAP_INTERRUPT
-
-#undef LOCKING_SUPPORT_ENABLE
-#undef LOCKING_RESYNC_ENABLE
-
 #ifdef RGBLIGHT_ENABLE
-#    define RGBLIGHT_EFFECT_BREATHING
-#    define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-#    define RGBLIGHT_EFFECT_SNAKE
-#    define RGBLIGHT_EFFECT_KNIGHT
-#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
-
-#    define RGBLIGHT_HUE_STEP 8
-#    define RGBLIGHT_SAT_STEP 8
-#    define RGBLIGHT_VAL_STEP 8
+#    define RGBLIGHT_ANIMATIONS
+#    define RGBLIGHT_HUE_STEP  8
+#    define RGBLIGHT_SAT_STEP  8
+#    define RGBLIGHT_VAL_STEP  8
 #    define RGBLIGHT_LIMIT_VAL 150
 #endif
 
-#define USB_POLLING_INTERVAL_MS 1
+// Lets you roll mod-tap keys
+#define IGNORE_MOD_TAP_INTERRUPT
+
+// If you are using an Elite C rev3 on the slave side, uncomment the lines below:
+//#define SPLIT_USB_DETECT
+//#define NO_USB_STARTUP_CHECK
 #define ENCODER_RESOLUTION 2
