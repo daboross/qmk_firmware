@@ -57,8 +57,8 @@ enum custom_keycodes {
 
 #ifdef COMBO_ENABLE
 #define COMBO_COUNT 3
-const uint16_t PROGMEM nav_combo[] = {KC_SPACE, LA_NAV, COMBO_END}; 
-const uint16_t PROGMEM sym_combo[] = {KC_SPACE, LA_SYM, COMBO_END}; 
+const uint16_t PROGMEM nav_combo[] = {KC_SPACE, LA_NAV, COMBO_END};
+const uint16_t PROGMEM sym_combo[] = {KC_SPACE, LA_SYM, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(nav_combo, LA_NAV),
     COMBO(sym_combo, LA_SYM),
@@ -128,13 +128,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYM] = LAYOUT(
       _______, _______, KC_LBRC, KC_LCBR, KC_LBRC, KC_TILD,                                     KC_GRV , KC_RPRN, KC_RCBR, KC_RBRC, _______, _______,
       _______, KC_MINS, KC_ASTR, KC_EQL , KC_UNDS, KC_DLR ,                                     KC_HASH, OS_CMD , OS_ALT , OS_CTRL, OS_SHFT, _______,
-      _______, KC_PLUS, KC_PIPE, KC_AT  , KC_SLSH, KC_PERC, _______, _______, _______, _______, KC_CIRC, KC_BSLS, KC_AMPR, KC_QUES, KC_EXLM, _______, 
+      _______, KC_PLUS, KC_PIPE, KC_AT  , KC_SLSH, KC_PERC, _______, _______, _______, _______, KC_CIRC, KC_BSLS, KC_AMPR, KC_QUES, KC_EXLM, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
 /*
  * Raised layer: numbers and f-keys
- * 
+ *
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |        |  1   |  2   |  3   |  4   |  5   |                              |  6   |  7   |  8   |  9   |  0   |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
@@ -148,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_RAISE] = LAYOUT(
       _______,  KC_1  ,  KC_2  ,  KC_3  ,  KC_4  , KC_5   ,                                     KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , _______,
-      _______,  KC_F5 ,  KC_F6 ,  KC_F7 ,  KC_F8 , KC_F11 ,                                     KC_F12 , KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI, _______,
+      _______,  OS_SHFT, OS_CTRL, OS_ALT, OS_CMD, KC_F11 ,                                     KC_F12 , OS_CMD, OS_ALT, OS_CTRL, OS_SHFT, _______,
       _______,  KC_F1 ,  KC_F2 ,  KC_F3 ,  KC_F4 , KC_F5  , _______, _______, _______, _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
