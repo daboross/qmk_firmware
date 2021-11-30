@@ -518,7 +518,7 @@ void oled_task_user(void) {
                 oled_write_P(PSTR("numbers\n"), false);
                 break;
             default:
-                oled_write_P(PSTR("Undefined\n"), false);
+                oled_write_P(PSTR("?\n"), false);
         }
 
         // Write host Keyboard LED Status to OLEDs
